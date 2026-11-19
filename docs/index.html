@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="知乎 MCN 闪耀助手：把答主所属 MCN 机构显示在用户名旁的 Chrome Manifest V3 扩展。"
+    />
+    <meta name="theme-color" content="#f7f5ef" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="知乎 MCN 闪耀助手" />
+    <meta
+      property="og:description"
+      content="在知乎更醒目地看到答主所属 MCN，支持自动加载、隐藏正文、表格复制和批量管理。"
+    />
+    <meta
+      property="og:url"
+      content="https://severus24.github.io/zhihu-mcn-highlighter/"
+    />
+    <meta
+      property="og:image"
+      content="https://severus24.github.io/zhihu-mcn-highlighter/assets/social-preview.png"
+    />
+    <title>知乎 MCN 闪耀助手</title>
+    <link rel="icon" href="assets/icon-128.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="./" aria-label="知乎 MCN 闪耀助手首页">
+          <img src="assets/icon-128.png" alt="" width="34" height="34" />
+          <span>MCN 闪耀助手</span>
+        </a>
+        <nav aria-label="主导航">
+          <a href="#features">功能</a>
+          <a href="#install">安装</a>
+          <a href="#source">来源</a>
+          <a
+            class="nav-github"
+            href="https://github.com/severus24/zhihu-mcn-highlighter"
+            >GitHub</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div class="intro-inner">
+          <p class="eyebrow">CHROME MANIFEST V3 · OPEN SOURCE</p>
+          <h1>让 MCN 标签更醒目</h1>
+          <p class="lead">
+            在知乎答主名称旁直接显示所属 MCN。按需读取、本地保存，
+            也可以一次管理同一机构下的已发现作者。
+          </p>
+          <div class="hero-actions">
+            <a
+              class="button primary"
+              href="https://github.com/severus24/zhihu-mcn-highlighter/releases/latest/download/mcn-zhihu-chrome-v1.0.3.zip"
+              >下载 v1.0.3</a
+            >
+            <a
+              class="button secondary"
+              href="https://github.com/severus24/zhihu-mcn-highlighter"
+              >查看源码</a
+            >
+          </div>
+          <dl class="release-meta">
+            <div>
+              <dt>安装方式</dt>
+              <dd>开发者模式加载</dd>
+            </div>
+            <div>
+              <dt>数据位置</dt>
+              <dd>仅本机 Chrome</dd>
+            </div>
+            <div>
+              <dt>许可证</dt>
+              <dd>MIT</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="product-band" aria-labelledby="preview-title">
+        <div class="section-inner product-grid">
+          <div class="product-copy">
+            <p class="section-kicker">实际扩展面板</p>
+            <h2 id="preview-title">作者与机构信息集中在一个面板</h2>
+            <p>
+              自动读取可公开访问的知乎作者资料，将 MCN 与作者关系保存在扩展本地存储中。
+              不启用自动加载时，只有点击徽章才会发起请求。
+            </p>
+            <ul class="check-list">
+              <li>当前页作者与 MCN 数量汇总</li>
+              <li>按机构展开作者并批量操作</li>
+              <li>缓存与正文显示均可随时还原</li>
+            </ul>
+          </div>
+
+          <div class="popup-preview" aria-label="扩展控制面板预览">
+            <div class="preview-titlebar">
+              <span class="traffic-lights" aria-hidden="true">
+                <i></i><i></i><i></i>
+              </span>
+              <span>扩展面板</span>
+            </div>
+            <div class="preview-header">
+              <img src="assets/icon-128.png" alt="" width="38" height="38" />
+              <div>
+                <strong>知乎 MCN 闪耀助手</strong>
+                <span>已连接当前知乎页面</span>
+              </div>
+            </div>
+            <div class="preview-controls">
+              <div>
+                <span>自动加载 MCN</span>
+                <i class="toggle active"></i>
+              </div>
+              <div>
+                <span>隐藏回答正文</span>
+                <i class="toggle"></i>
+              </div>
+            </div>
+            <div class="preview-actions">
+              <span>扫描当前页面</span>
+              <span>复制表格</span>
+              <span class="danger">清理缓存</span>
+            </div>
+            <div class="preview-stats">
+              <div><strong>6</strong><span>MCN 机构</span></div>
+              <div><strong>23</strong><span>已记录作者</span></div>
+            </div>
+            <div class="preview-list-title">
+              <strong>已发现 MCN</strong>
+              <span>共 23 位</span>
+            </div>
+            <div class="preview-record">
+              <div>
+                <strong>示例文化传媒</strong>
+                <span>8 位作者</span>
+              </div>
+            </div>
+            <div class="preview-record">
+              <div>
+                <strong>示例内容工作室</strong>
+                <span>5 位作者</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features" id="features" aria-labelledby="features-title">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="section-kicker">核心能力</p>
+            <h2 id="features-title">保留原脚本能力，换成原生扩展体验</h2>
+          </div>
+          <div class="feature-grid">
+            <article>
+              <span>01</span>
+              <h3>MCN 徽章</h3>
+              <p>在答主和机构提问旁显示所属机构，支持点击加载与自动加载。</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>正文隐藏</h3>
+              <p>只保留作者信息与问题标题，适合快速浏览或整理截图。</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>表格复制</h3>
+              <p>按机构、用户 token、昵称和个人主页地址生成制表符分隔文本。</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>本地缓存</h3>
+              <p>从原用户脚本迁移已有数据，并使用扩展本地存储继续维护。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="install" id="install" aria-labelledby="install-title">
+        <div class="section-inner install-grid">
+          <div>
+            <p class="section-kicker">安装</p>
+            <h2 id="install-title">下载、解压、加载</h2>
+            <a
+              class="button primary"
+              href="https://github.com/severus24/zhihu-mcn-highlighter/releases/latest/download/mcn-zhihu-chrome-v1.0.3.zip"
+              >下载 Chrome 扩展</a
+            >
+            <details class="checksum">
+              <summary>查看 SHA-256 校验值</summary>
+              <code>e5f9e262a56eeed961daeb1b64a7531433bc8d1db656713898f18ca43b2e1cb2</code>
+              <a
+                href="https://github.com/severus24/zhihu-mcn-highlighter/releases/latest/download/mcn-zhihu-chrome-v1.0.3.zip.sha256"
+                >下载校验文件</a
+              >
+            </details>
+          </div>
+          <ol class="install-steps">
+            <li>
+              <span>1</span>
+              <div>
+                <strong>解压发布包</strong>
+                <p>保留目录中的 manifest.json 与全部子目录。</p>
+              </div>
+            </li>
+            <li>
+              <span>2</span>
+              <div>
+                <strong>打开扩展管理页</strong>
+                <button class="copy-button" data-copy="chrome://extensions/">
+                  复制 chrome://extensions/
+                </button>
+              </div>
+            </li>
+            <li>
+              <span>3</span>
+              <div>
+                <strong>加载已解压扩展</strong>
+                <p>开启开发者模式，选择刚才解压出的文件夹。</p>
+              </div>
+            </li>
+            <li>
+              <span>4</span>
+              <div>
+                <strong>刷新知乎</strong>
+                <p>打开任意知乎页面，点击答主旁的 MCN 徽章。</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="source" id="source" aria-labelledby="source-title">
+        <div class="section-inner source-grid">
+          <div>
+            <p class="section-kicker">来源</p>
+            <h2 id="source-title">基于 xioxin 的原用户脚本</h2>
+            <p>
+              原项目以 MIT 许可发布。本仓库保留原脚本可读留档，并将菜单、
+              存储、页面 API 和打包方式转换为 Chrome Manifest V3。
+            </p>
+          </div>
+          <div class="source-links">
+            <a href="https://zhuanlan.zhihu.com/p/9647814222">
+              <span>原作者文章</span>
+              <strong>xioxin · 知乎</strong>
+            </a>
+            <a href="https://greasyfork.org/zh-CN/scripts/519155">
+              <span>原用户脚本</span>
+              <strong>Greasy Fork 519155</strong>
+            </a>
+            <a
+              href="https://github.com/severus24/zhihu-mcn-highlighter/blob/main/NOTICE.md"
+            >
+              <span>来源声明</span>
+              <strong>NOTICE.md</strong>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>知乎 MCN 闪耀助手 · MIT License</span>
+        <span>与知乎官方无隶属关系</span>
+      </div>
+      <span class="copy-status" role="status" aria-live="polite"></span>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

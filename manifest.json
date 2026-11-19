@@ -1,0 +1,57 @@
+{
+  "manifest_version": 3,
+  "name": "知乎 MCN 闪耀助手",
+  "short_name": "MCN 闪耀",
+  "version": "1.0.3",
+  "description": "在知乎更醒目地展示答主所属 MCN，并支持筛选、复制和批量拉黑。",
+  "minimum_chrome_version": "111",
+  "permissions": [
+    "activeTab",
+    "clipboardWrite",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.zhihu.com/*"
+  ],
+  "action": {
+    "default_title": "知乎 MCN 闪耀助手",
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.zhihu.com/*"
+      ],
+      "js": [
+        "scripts/page-bridge.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "https://www.zhihu.com/*"
+      ],
+      "js": [
+        "scripts/content.js"
+      ],
+      "css": [
+        "styles/content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

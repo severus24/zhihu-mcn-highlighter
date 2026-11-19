@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>知乎 MCN 闪耀助手</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <img src="../icons/icon-48.png" alt="" width="40" height="40" />
+      <div>
+        <h1>知乎 MCN 闪耀助手</h1>
+        <p id="page-status">正在连接当前知乎页面…</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="controls" aria-label="显示设置">
+        <label class="switch-row">
+          <span>
+            <strong>自动加载 MCN</strong>
+            <small>进入页面后主动读取答主资料</small>
+          </span>
+          <input id="auto-load" type="checkbox" />
+        </label>
+
+        <label class="switch-row">
+          <span>
+            <strong>隐藏回答正文</strong>
+            <small>保留作者信息，便于快速浏览和截图</small>
+          </span>
+          <input id="hide-content" type="checkbox" />
+        </label>
+      </section>
+
+      <section class="actions" aria-label="快捷操作">
+        <button id="scan-page" type="button">扫描当前页面</button>
+        <button id="copy-table" type="button">复制表格</button>
+        <button id="clear-cache" class="danger" type="button">清理缓存</button>
+      </section>
+
+      <section class="summary">
+        <div>
+          <strong id="mcn-count">0</strong>
+          <span>MCN 机构</span>
+        </div>
+        <div>
+          <strong id="author-count">0</strong>
+          <span>已记录作者</span>
+        </div>
+      </section>
+
+      <section class="records" aria-labelledby="records-title">
+        <div class="section-heading">
+          <h2 id="records-title">已发现 MCN</h2>
+          <span id="record-status">等待数据</span>
+        </div>
+        <div id="mcn-list" class="mcn-list">
+          <p class="empty-state">还没有发现 MCN 作者</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span id="toast" role="status" aria-live="polite"></span>
+      <span>v1.0.3</span>
+    </footer>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
