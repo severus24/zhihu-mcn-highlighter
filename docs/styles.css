@@ -156,6 +156,7 @@ h1 {
   min-height: 1em;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 0.96em;
+  transform: translateY(0.04em);
 }
 
 .lead {
