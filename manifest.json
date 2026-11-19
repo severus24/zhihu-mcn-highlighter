@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "知乎 MCN 闪耀助手",
   "short_name": "MCN 闪耀",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "在知乎更醒目地展示答主所属 MCN，并支持筛选、复制和批量拉黑。",
   "minimum_chrome_version": "111",
   "permissions": [
