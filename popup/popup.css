@@ -315,11 +315,11 @@ input[type="checkbox"]:checked::after {
 }
 
 footer {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  min-height: 35px;
+  gap: 5px 12px;
+  min-height: 48px;
   padding: 8px 14px;
   border-top: 1px solid #e4e7ec;
   color: #98a2b3;
@@ -328,5 +328,29 @@ footer {
 }
 
 #toast {
+  min-width: 0;
   color: #475467;
+}
+
+.version {
+  justify-self: end;
+}
+
+.footer-links {
+  display: flex;
+  grid-column: 1 / -1;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-links a {
+  color: #667085;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #175cd3;
+  text-decoration: underline;
 }

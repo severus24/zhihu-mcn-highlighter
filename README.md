@@ -27,7 +27,7 @@
 ### GitHub Release
 
 1. 从 [Releases](https://github.com/severus24/zhihu-mcn-highlighter/releases/latest)
-   下载 `mcn-zhihu-chrome-v1.0.3.zip`。
+   下载 `mcn-zhihu-chrome-v1.0.4.zip`。
 2. 解压 ZIP。
 3. 打开 `chrome://extensions/`。
 4. 开启右上角“开发者模式”。

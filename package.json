@@ -1,6 +1,6 @@
 {
   "name": "zhihu-mcn-highlighter",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": true,
   "description": "A Manifest V3 Chrome extension that makes MCN affiliations visible on Zhihu.",
   "scripts": {
