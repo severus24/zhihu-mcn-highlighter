@@ -130,13 +130,32 @@ p {
 }
 
 h1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   max-width: 780px;
   margin: 0 auto;
+  column-gap: 0.14em;
+  row-gap: 0.04em;
   font-family: "Songti SC", "STSong", Georgia, serif;
   font-size: clamp(44px, 7vw, 78px);
   font-weight: 700;
-  line-height: 1.06;
+  line-height: 1;
   letter-spacing: -0.035em;
+}
+
+.title-chinese,
+.title-latin {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.title-latin {
+  min-height: 1em;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.96em;
 }
 
 .lead {
